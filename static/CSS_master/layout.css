@@ -1,0 +1,139 @@
+/* General css */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f8f9f9;
+    min-height: 1200px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* .container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+#nav{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+:root{
+    --main-color:#10cab7;
+    --main-duration:0.5s;
+}
+
+/* starting header */
+.header{
+
+    margin:5px 10px;
+    height: 130px;
+    padding: 20px;
+    background-image: linear-gradient(45deg, #718093,#f7f7f7);
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #718093;
+}
+
+.header #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo{
+    width: 60px;
+}
+h1{
+    position: relative;
+    text-transform: uppercase;
+    color: #1e272e;
+    text-shadow:3px 1px #636e72;
+}
+h1 span{
+    position: absolute;
+    top:-120%;
+    margin: 50px 20px;
+    padding: 50px 0px;
+    font-weight: bold;
+}
+h3{
+    color: #1e272e;
+    text-transform: uppercase;
+    text-shadow:1px 1px #c8d6e5;
+}
+
+.header .links{
+    position: relative;
+}
+.header .links:hover .icons span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icons{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icons span{
+    background-color: #333;
+    height: 2px;
+    margin-bottom: 5px;
+}
+.header .links .icons span:first-child{
+    width: 100%;
+}
+.header .links .icons span:nth-child(2){
+    width: 60%;
+    transition: var(--main-duration);
+}
+.header .links .icons span:last-child{
+    width: 100%;
+}
+.header .links ul{
+    border-radius: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    top:calc(100% + 15px);
+    min-width: 250px;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 2px 5px 0 #636e72;
+
+}
+.header .links:hover ul{
+    display: block;
+
+}
+.header .links ul::before{
+    content:"";
+    border: 10px solid ;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: var(--main-duration);
+}
+.header .links ul li a:hover{
+    padding-left: 25px;
+    color: #aaa;
+}
+.header .links ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,158 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* margin: 0; */
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    min-height: 1050px;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    font-family: sans-serif;
+    background-image: url(../images/HCB.jpg);
+    background-size: cover;
+
+}
+#popup h1{
+    color: #1e272e;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+a img{
+    margin-top: 5px;
+}
+a span{
+    margin-top: 60px;
+}
+h2{
+    color: #1e272e;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+.cont{
+    border: none;
+    background-image: url(../images/H9.jpg);
+    box-shadow: 0 5px 7px 0 #191919;
+    position: relative;
+    width: 600px;
+    border-radius: 38px;
+    color:#dfe6e9 ;
+    width: 300px;
+    padding: 40px;
+    margin-top: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px 0px #3d3d3d;
+    transition: 0.5s;
+}
+.cont#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.cont .det{
+    position: relative;
+    max-width: 800px;
+}
+input{
+    position: relative;
+    border: 0;
+    border: 2px solid  #b2bec3;
+    border-radius: 24px;
+    width: 200px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.25s;
+}
+input:hover{
+    width: 250px;
+    border-color:#d1d8e0;
+}
+input[type="submit"]{
+    width: 150px;
+}
+input[type="submit"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity:0;
+    transition: 0.5s;
+    color:#dfe6e9 ;
+    width: 400px;
+    padding: 40px;
+    background-image: url(../images/H9.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0px #3d3d3d;
+}
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+select{
+    color: #CAD3C9;
+     outline: none;
+     background-color: transparent;
+     border: 2px solid  #b2bec3;
+     border-radius: 24px;
+     width: 200px;
+     height: 48px;
+     padding: 0px 50px;
+     margin: 10px 0px;
+     cursor: pointer;
+    transition: 0.25s ease-in-out;
+    font-size: 20px;
+
+}
+select option{
+    padding-left: 10px;
+    font-size: 20px;
+    background-color: #5d5d5d;
+}
+label{
+    padding-top: 10px;
+}
+input[type="button"]{
+    width: 150px;
+}
+input[type="button"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+select:hover{
+    width: 250px ;
+}

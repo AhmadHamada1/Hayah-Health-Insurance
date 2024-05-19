@@ -1,0 +1,229 @@
+/* General css */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    /*min-height: 950px;*/
+    display: grid;
+    grid-template-rows: repeat(2,800px) ;
+    /*background-image: url(../images/H66.jpg);*/
+    /*background-size: cover;*/
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.container55{
+
+    background-image: url(../images/H66.jpg);
+    background-size: cover;
+
+}
+input[type="submit"]{
+    margin-bottom: 200px;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* #nav{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+
+/* small screen */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* meidum screen  */
+@media (min-width: 992px){
+   .container{
+       width: 970px;
+   }
+}
+/* large screen */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* variables */
+:root{
+    --main-color:#10cab7;
+    --main-duration:0.5s;
+}
+
+/* starting header */
+/*
+anthor way to make border for li
+
+.header .links ul li{
+    box-shadow: 1px 0 1px 1px #ddd;
+} */
+/* ending header */
+/* start component */
+.special-heading{
+    color: rgba(208, 205, 205, 1);
+    opacity: 0.7;
+    text-shadow: 1.5px 1px #aaa;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+.special-heading + p{
+    margin: -30px 0 0;
+    text-align: center;
+    color: #797979;
+    font-size: 20px;
+}
+@media(max-width:767px){
+    .special-heading{
+        font-size: 60px;
+        
+    }
+    .special-heading + p{
+        margin-top:-20px ;
+    }
+}
+/* end component */
+
+
+
+
+
+/* landing */
+.landing{
+    position: relative;
+    background-size: cover;
+    height: calc(100vh - 100px);
+}
+/* stat features */
+
+
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 500px;
+    background-color: #f2f2f2;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.features .container .feat{
+    padding: 25px;
+    text-align: center;
+}
+.features .container .feat i{
+    color: var(--main-color);
+}
+.features .container .feat h3{
+    font-weight: 800;
+    margin: 30px 0;
+}
+.features .container .feat p{
+    line-height: 1.6;
+    font-size: 17px;
+    color: #555;
+}
+/* end features */
+/* star services */
+.services{
+    margin:370px;
+    margin-top: 0px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+
+}
+.services-content{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.testimotionals {
+    width:350px;
+    display:inline-block;
+    margin-left:50px;
+    margin-top:50px
+    
+}
+.testimotionals .card {
+    color:#dfe6e9 ;
+    border-radius: 24px;
+    height: 450px;
+    position:relative;
+    overflow:hidden;
+    width:350px;
+    margin:0 auto;
+    background:none;
+    background-image: url(../images/H9.jpg);
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+    box-shadow: 0 5px 8px 0px #3d3d3d;
+}
+a img{
+    margin-top: -8px;
+}
+a span{
+    margin-top: 30px;
+}
+
+.testimotionals .card .layer {
+    z-index:1;
+    position:absolute;
+    top:calc(100% - 2px);
+    height:100%;
+    width:100%;
+    left:0;
+    background:linear-gradient(to left , orange, tomato);
+    transition:0.5s;
+    
+} 
+.testimotionals .card .content {
+    z-index:2; 
+    position:relative;
+} 
+.testimotionals .card:hover  .layer{
+    top:0;
+} 
+input{
+    text-decoration: none;
+    border: 0;
+    border: 2px solid #d1d8e0;
+    border-radius: 24px;
+    width: 100px;
+    background: none;
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: #d1d8e0;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+input:hover{
+    background-color:#4b4b4b;
+    color: #dfe6e9;
+}
+.pos{
+    margin-top:220px;
+    margin-left:100px;
+}
+/* end services */

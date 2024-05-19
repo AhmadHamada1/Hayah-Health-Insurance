@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayah</title>
+    <link rel="shortcut icon" href="../static/images/R.png">
+    <link rel="stylesheet" href="../static/CSS_master/layout.css">
+    <style>
+        .change:visited{
+        display: none;
+        color: transparent;
+        }
+    </style>
+    {% block head %}{%endblock%}
+</head>
+<body>
+    <div class="container55">
+        <div class="header">
+            <div id="nav">
+
+                <a class="change" href="/">
+
+                    <h1>
+                        <img class="logo" src="../static/images/R.png" alt="Error not found!">
+                        <span> Hayah  </span>
+                </h1></a>
+<!--                <h4> Health insurance company</h4>-->
+                <div class="links">
+                        <span class="icons">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <ul>
+
+                        {% if session['Cid'] and session['Roleid'] == 1 %}
+                            <li> <a href="/profile">Add Dependent</a></li>
+                            <li> <a href="/file_claim">File Claim</a></li>
+                            <li> <a href="/#Services">Services</a></li>
+<!--                            <li> <a href="#About">About</a></li>-->
+                            <li> <a href="/logout">Sign out</a></li>
+                        {% elif session['Cid'] and session['Roleid'] == 2 %}
+                            <li> <a href= "/admin">Admin</a> </li>
+                            <li> <a href="/logout">Sign out</a></li>
+                        {% else %}
+                        <li> <a href="/login">Sign in</a></li>
+                        <li> <a href="/register">Register</a></li>
+<!--                        <li> <a href="#About">About</a></li>-->
+                        <li> <a href="/#Services">Services</a></li>
+                        {% endif %}
+                        </ul>
+                </div>
+            </div>
+        </div>
+        {% block image %}{% endblock %}
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

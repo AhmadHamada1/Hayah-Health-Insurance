@@ -1,0 +1,134 @@
+{% extends 'layout.html' %}
+
+
+{% block head %}
+<link rel="stylesheet" href="../static/CSS_master/main.css">
+    <!-- Render all elments normally -->
+    <link rel="stylesheet" href="../static/CSS_master/all.min.css">
+    <!-- Font Awesome library-->
+    <link rel="stylesheet" href="../static/CSS_master/normalize.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap" rel="stylesheet">
+
+
+{% endblock %}
+
+<!--title-->
+{% block title %}Home{% endblock %}
+{% block image %}
+
+        <div class="landing">
+            <div class="intro-landing"></div>
+        </div>
+{% endblock %}
+
+<!--body-->
+{% block content %}
+<!-- start landding -->
+
+    <!-- end landding -->
+ <!--<div class="features" id="About" >
+        <div class="container">
+            <div class="feat">
+                <i class="fas fa-magic fa-2x"></i>
+                &lt;!&ndash; so I can change the size of icons from syntax of (fa-nx) which n is no. size &ndash;&gt;
+                <h3>Tell us your idea</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus dignissimos dolores voluptatibus pariatur obcaecati nam placeat? Adipisci,</p>
+            </div>
+            <div class="feat">
+                <i class="far fa-gem fa-2x"></i>
+                <h3>We will do all work</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus dignissimos dolores voluptatibus pariatur obcaecati nam placeat? Adipisci,</p>
+            </div>
+            <div class="feat">
+                <i class="fas fa-globe fa-2x"></i>
+                <h3>Your product is worldwide</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus dignissimos dolores voluptatibus pariatur obcaecati nam placeat? Adipisci, </p>
+            </div>
+        </div>
+    </div>-->
+    <!--end features-->
+    <!--start services-->
+    <div class="services" id="Services">
+        <div class="container">
+            <h2 class="special-heading">Our Plans</h2>
+<!--                <p>Suit all budgets</p>-->
+                <div class="services-content">
+                    <div class="testimotionals">
+                        <div class="card">
+                          <div class="layer">
+                          </div>
+                          <div class="content">
+                            <h2>Basic</h2>
+                                <div class="details">
+<!--                                    <h2>Hospitals in basic plan:&lt;!&ndash;br> <span>Backend developer</span&ndash;&gt;</h2>-->
+                                    {% for i in basic %}
+                                    <label>{{i[1]}}, </label>
+                                    {% endfor %}
+                                <div class="pos">
+                                    <form action="/" method="post">
+                                        <input type="submit" value="Purchase"name="buybasic">
+                                    </form>
+                                </div>
+
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  <!-- two -->
+                      <div class="testimotionals">
+                        <div class="card">
+                          <div class="layer">
+
+                          </div>
+                          <div class="content">
+                                <h2> Premium</h2>
+                            <div class="details">
+<!--                              <h2>Hospitals in premium plan:&lt;!&ndash;br> <span>Backend developer</span&ndash;&gt;</h2>-->
+                                    {% for i in premium %}
+                                    <label>{{i[1]}}, </label>
+                                    {% endfor %}
+                              <div class="pos">
+                                <form action="/" method="post">
+                                    <input type="submit" value="Purchase"name="buypremium">
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <!-- three -->
+                      <div class="testimotionals">
+                        <div class="card">
+                          <div class="layer">
+
+                          </div>
+                          <div class="content">
+                                <h2> Gold</h2>
+                            <div class="details">
+<!--                              <h2>Hospitals in Golden plan:&lt;!&ndash;br> <span>Backend developer</span&ndash;&gt;</h2>-->
+                                    {% for i in golden %}
+                                    <label>{{i[1]}}, </label>
+                                    {% endfor %}
+                             <div class="pos">
+                                <form action="/" method="post">
+                                    <input type="submit" name="buygold" value="Purchase">
+                                </form>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- three end -->
+                    </div>
+                </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+<!--footer-->
+{% block footer %}{% endblock %}

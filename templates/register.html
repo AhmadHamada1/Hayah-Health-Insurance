@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title> Register </title>-->
+<!--    <link rel="stylesheet" href="../static/CSS_master/register.css">-->
+<!--</head>-->
+<!--<body>-->
+{% extends 'layout.html' %}
+{% block head %}
+<link rel="stylesheet" href="../static/CSS_master/register.css">
+{% endblock %}
+{% block content %}
+
+  <div class="container">
+        <h1> Register </h1>
+
+    <form action="/register" method="post">
+
+        <label> National ID </label>
+        <input type="number" required name="Cid">
+        <label> First Name </label>
+        <input type="text" name="FName" required placeholder="First Name">
+        <label> Last Name </label>
+        <input type="text" name="LName" required placeholder="Last Name">
+        <label>Email</label>
+        <input type="email" required name="E_mail">
+        <label> password</label>
+        <input type="password" required name="Password">
+        <label> Address </label>
+        <input type="text" required name="Address" >
+        <label>Date of birth </label>
+        <input type="date" required name="DateOfBirth">
+        <input type="submit" class="btn" name="submit" value="submit">
+    </form>
+
+  </div>
+{% endblock %}
+{% block footer %} {% endblock %}

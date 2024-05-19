@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block head %}
+<link rel="stylesheet" href="../static/CSS_master/file_claim.css">
+{% endblock %}
+{% block content %}
+
+    <div class="claim">
+        <form action="/file_claim" method="post">
+
+            <div class="benf">
+                <h2> Who will file the claim?</h2>
+                <!-- <div >
+                    <label for="cust" class="main"> CUSTOMER
+                    <input type="checkbox" id="cust" name="benf">
+                    <span class="w3docs"></span>
+                    </label>
+                </div> -->
+
+
+                    {% for i in data1 %}
+
+                    <div class="rad">
+                         <input  type="radio" id="{{i[0]}}" value="{{i[0]}}" name="benf">
+                         <label for="{{i[0]}}"> {{i[1]}}</label>
+                    </div>
+                    {% endfor %}
+
+
+                <div class="ho-btn">
+                    <input   type="submit" value="Check Available Hospitals" name="chk_hospital">
+                </div>
+            </div>
+
+
+
+{% endblock %}
+{% block footer %} {% endblock %}

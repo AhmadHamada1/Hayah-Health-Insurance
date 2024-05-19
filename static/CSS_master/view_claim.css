@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 1600px;
+    background-image: url(../images/HCB.jpg);
+    background-size: cover;
+}
+.context{
+    margin-top: 400px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:580px;
+    height: 1300px;
+
+    background-image: linear-gradient(60deg,grey,#eeeeee);
+
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 0px #3d3d3d;
+    padding: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+input{
+    font-size: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 15px auto;
+    outline: none;
+    border: 1px solid #1e272e;
+    border-radius: 24px;
+    width: 500px;
+    /* background: none; */
+    display: block;
+    height: 40px;
+    /* box-shadow: 0 2px 5px 0 #1e272e; */
+}
+label{
+    color: #1e272e;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 10px;
+}
+.text{
+
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    padding: 10px;
+    border: 1px solid #1e272e;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    /* background: none; */
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    outline: 0;
+    /* box-shadow: 0 2px 5px 0 #1e272e; */
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.btn{
+    display:flex;
+    justify-content: space-evenly;
+}
+input[type="submit"]{
+    cursor: pointer;
+    width:200px;
+    margin:0 10px;
+    outline: none;
+    border: none;
+    background-color:rgb(220,220,220);
+    box-shadow:0 2px 5px 0 #1e272e ;
+    transition: 0.25s ease-in-out;
+
+}
+
+input[type="submit"]:hover{
+    color:#191919;
+    width:240px;
+
+
+}

@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="../static/CSS_master/plan.css">
+
+{% endblock %}
+
+<!--title-->
+{% block title %}Home{% endblock %}
+
+<!--body-->
+{% block content %}
+     <div class="box">
+        <h2>Choose Beneficiary</h2>
+
+        <form action="/plan" method="post">
+            {% for i in data %}
+            <div>
+                <label for="{{i[1]}}" class="main"> {{i[1]}}
+                    <input type="checkbox" id="{{i[1]}}" value="{{i[0]}}"name="dep">
+                    <span class="w3docs"></span>
+                </label>
+            </div>
+            {% endfor %}
+
+
+            <div>
+            {% if data: %}
+                <input type="submit" value="choose" name="choose">
+
+            {% else %}
+                <input type="submit" value="No Clients Available" name="choose" disabled style="width: auto">
+            {% endif %}
+            </div>
+
+
+        </form>
+    </div>
+
+{% endblock %}
+
+
+<!--footer-->
+{% block footer %}{% endblock %}

@@ -1,0 +1,126 @@
+/* delete the icon in cid */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+
+
+
+*{
+    /*  [1] acess first form with class
+        [2] arrangement the margin and padding
+        [3] erase the icon at the end of the number input
+    */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    min-height: 1300px;
+    font-family: sans-serif;
+    /* background-image: linear-gradient(45deg,#2ed573,#1e90ff ); */
+    background-image: url(../images/HCB.jpg);
+    background-size: cover;
+    /**/
+}
+
+h2{
+    text-transform: uppercase;
+    color: #1e272e;
+}
+h3{
+    text-align: left;
+    margin: 10px    ;
+    text-transform: uppercase;
+}
+
+
+.sec {
+    margin-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 580px;
+    height: 1000px;
+    background-image: linear-gradient(60deg, grey, #eeeeee);
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 0px #3d3d3d;
+    padding: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.sec input{
+    background-color: #f7f7f7;
+    border: 1px solid  #191919;
+    border-radius: 24px;
+    width: 430px;
+    font-size: 18px;
+    display:inline-block;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 10px 0px;
+    outline: none;
+    color:#1e272e;
+    transition: 0.25s;
+}
+.sec select{
+    color: #1e272e;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid  #1e272e;
+    border-radius: 24px;
+    width:430px;
+    height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.sec select option{
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+textarea{
+    height: 300px;
+    width: 430px;
+    cursor: text;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+}
+
+
+input[type="submit"]{
+    cursor: pointer;
+    width:200px;
+    margin:0 10px;
+    outline: none;
+    border: none;
+    background-color:rgb(220,220,220);
+    box-shadow:0 2px 5px 0 #1e272e ;
+    transition: 0.25s ease-in-out;
+
+}
+
+input[type="submit"]:hover{
+    color:#191919;
+    width:240px;
+
+
+}

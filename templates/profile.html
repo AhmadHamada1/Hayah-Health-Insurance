@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block head %}
+    <link rel="stylesheet" href="../static/CSS_master/dependent.css">
+{% endblock %}
+{% block content %}
+    <div class="cont" id="blur">
+        <div class="det">
+            <h2> Dependent </h2>
+       <input onclick="toggle()" type="submit" value="ADD">
+        </div>
+    </div>
+
+    <div id="popup">
+        <div class="container">
+            <h1> Register </h1>
+        <form action="/profile" method="post">
+
+            <label> National ID </label>
+            <input type="number" required name="Did">
+            <label> Name </label>
+            <input type="text" name="DName" required placeholder="Name">
+            <H5>RELATIONSHIP</H5>
+            <select name="Rel" id="Rel" >
+                {% for i in data1 %}
+                <option value="{{i[0]}}">{{i[1]}}</option>
+                {% endfor %}
+            </select>
+
+
+            <div>
+                <label> Address </label>
+                <input type="text" required name="Address" >
+            </div>
+            <label>Date of birth </label>
+            <input type="date" required name="DateOfBirth">
+            <input type="submit" class="btn" name="ADD" value="ADD" >
+            <input type="button" class="btn" name="Close" value="Close" onclick="toggle()">
+        </form>
+      </div>
+    </div>
+
+
+
+    <script src="../static/JS_master/prog.js"></script>
+
+{% endblock %}
+{% block footer %}{% endblock %}

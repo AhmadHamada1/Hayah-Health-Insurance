@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/CSS_master/view_claim.css">
+{% endblock %}
+
+{% block content %}
+     <div class="context">
+    <form action="" method="post">
+        <div>
+            <label for="">Cost</label>
+            <input type="text" name="number" value="{{info[0]}}" disabled>
+        </div>
+        <div>
+            <label for="">Hospital</label>
+            <input type="text" name="Hospital" value="{{hospital}}" disabled>
+        </div>
+        <div>
+            <label for="">Claim ID</label>
+            <input type="text" name="claim_view" value="{{info[2]}}" disabled>
+        </div>
+        <div>
+            <label for="">Date</label>
+            <input type="text" name="date" value="{{info[3]}}" disabled>
+        </div>
+        <div>
+            <label for="">Resolved</label>
+            {% if info[4] == 0 %}
+            <input type="text" name="resolved" value="No" disabled>
+            {% else %}
+            <input type="text" name="resolved" value="Yes" disabled>
+            {% endif %}
+        </div>
+        <div>
+            <label for="">benificiary ID</label>
+            <input type="text" name="benificiary" value="{{info[5]}}" disabled>
+        </div>
+        <div>
+            <label for="">Plan ID</label>
+            <input type="text" name="plan_id" value="{{info[6]}}" disabled>
+        </div>
+        <div>
+            <label for="">National ID</label>
+            <input type="text" name="plan_id" value="{{info[7]}}" disabled>
+        </div>
+        <div class="text">
+            <label for="">Details</label>
+            <textarea name="details" id="" cols="30" rows="10" disabled>{{info[1]}}</textarea>
+        </div>
+
+        {% if info[4] == 0 %}
+            <div class="btn">
+                <input type="submit" name="Check As Resolved" value="Check As Resolved" >
+                <input type="submit" name="Close" value="Close" >
+            </div>
+            {% else %}
+            <div class="btn">
+
+                <input type="submit" name="Close" value="Close" >
+
+            </div>
+
+            {% endif %}
+
+    </form>
+   </div>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

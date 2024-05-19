@@ -1,0 +1,506 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* margin: 0; */
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    margin:10px 20px ;
+    /* min-height: 1050px; */
+    font-family: sans-serif;
+    background-image: url(../images/HCB.jpg);
+    background-size: cover;
+}
+.all{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 50px 50px;
+}
+
+h1{
+    color: #1e272e;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+h2{
+    color: #1e272e;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 8px;
+}
+h3{
+    color: #1e272e;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+/* start hospital */
+.cont{
+    border: none;
+    background-image: url(../images/H9.jpg);
+    box-shadow: 0 5px 7px 0 #191919;
+    position: relative;
+    width: 600px;
+    border-radius: 38px;
+    color:#dfe6e9 ;
+    width: 300px;
+    padding: 40px;
+    margin-top: 70px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px 0px #3d3d3d;
+    transition: 0.5s;
+}
+.cont#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.cont .det{
+    position: relative;
+    max-width: 800px;
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity:0;
+    transition: 0.5s;
+    color:#dfe6e9 ;
+    width: 400px;
+    padding: 40px;
+    background-image: url(../images/H9.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0px #3d3d3d;
+    z-index: 3;
+
+}
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+/* end hospital */
+input{
+    position: relative;
+    border: 0;
+    border: 2px solid  #b2bec3;
+    border-radius: 24px;
+    width: 200px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+input:hover{
+    width: 250px;
+    border-color:#d1d8e0;
+}
+input[type="submit"]{
+    width: 150px;
+
+}
+input[type="submit"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+input[type="button"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+
+/* checkbox */
+.main{
+    display: block;
+    position: relative;
+    margin: 10px 0px 20px 60px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+  /* Hiding the initial checkbox */
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  /* Creating a custom checkbox based on demand */
+  .w3docs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color:#d2dae2;
+    border-radius: 50px;
+    box-shadow: 0px 2px 4px 0 #1e272e;
+    opacity: 0.9;
+
+  }
+  /* Specify the background color to be shown when hovering over checkbox */
+  .main:hover input ~ .w3docs {
+    background-color: #7f8fa6;
+  }
+  /* Specify the background color to be shown when checkbox is active */
+  .main input:active ~ .w3docs {
+    background-color: white;
+  }
+  /* Specify the background color to be shown when checkbox is checked */
+  .main input:checked ~ .w3docs {
+    background-color: #353b48;
+  }
+  /* Checkmark to be shown in checkbox */
+  /* It is not be shown when not checked */
+  .w3docs:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+  }
+  /* Display checkmark when checked */
+  .main input:checked ~ .w3docs:after {
+    display: block;
+  }
+  /* Styling the checkmark using webkit */
+  /* Rotated the rectangle by 45 degree and
+  showing only two border to make it look
+  like a tickmark */
+  .main .w3docs:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  input[type="submit"]{
+    font-size: 20px;
+    width: 150px;
+    border: 0;
+    border: 1px solid #485460;
+    border-radius: 24px;
+    background: none;
+    background-color: #636e72;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    box-shadow: 0 2px 5px 0 #1e272e;
+}
+input[type="submit"]{
+    width: 150px;
+}
+input[type="submit"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+ input[type="button"]{
+    font-size: 20px;
+    width: 150px;
+    border: 0;
+    border: 1px solid #485460;
+    border-radius: 24px;
+    background: none;
+    background-color: #636e72;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    box-shadow: 0 2px 5px 0 #1e272e;
+}
+input[type="button"]{
+    width: 150px;
+}
+input[type="button"]:hover{
+    width: 180px;
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+
+/* start customer */
+.cust{
+    border: none;
+    background-image: url(../images/H9.jpg);
+    box-shadow: 0 5px 7px 0 #191919;
+    position: relative;
+    width: 600px;
+    border-radius: 38px;
+    color:#dfe6e9 ;
+    width: 300px;
+    padding: 40px;
+    margin-top: 70px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px 0px #3d3d3d;
+    transition: 0.5s;
+}
+.cust#CS.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.cust .det{
+    position: relative;
+    max-width: 800px;
+}
+#ping{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity:0;
+    transition: 0.5s;
+    color:#dfe6e9 ;
+    width: 400px;
+    padding: 40px;
+    background-image: url(../images/H9.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0px #3d3d3d;
+    z-index: 3;
+}
+#ping.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.customer-num{
+    /* display: flex; */
+    /* justify-content: center; */
+
+    /* align-items: flex-start; */
+    width: 300px;
+    height: 400px;
+    max-height: 1500px;
+    overflow-y: scroll;
+}
+/* .customer-num::-webkit-scrollbar{
+    display: ;
+} */
+.customer-num input[type = "submit"]{
+    width: 150px;
+    height: 50px;
+}
+.customer-num label{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+/* end customer */
+
+/* start claim */
+.claim{
+    border: none;
+    background-image: url(../images/H9.jpg);
+    box-shadow: 0 5px 7px 0 #191919;
+    position: relative;
+    width: 600px;
+    border-radius: 38px;
+    color:#dfe6e9 ;
+    width: 300px;
+    padding: 40px;
+    margin-top: 70px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px 0px #3d3d3d;
+    transition: 0.5s;
+}
+.claim#claim.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.claim .det{
+    position: relative;
+    max-width: 800px;
+}
+#popup2{
+    overflow-y: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity:0;
+    transition: 0.5s;
+    color:#dfe6e9 ;
+    width: 600px;
+    height: 600px;
+    padding: 40px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0px #3d3d3d;
+    z-index: 3;
+}
+#popup2.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+#popup2 input{
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    border: 0;
+    border: 1px solid #485460;
+    border-radius: 24px;
+    background: none;
+    background-color: #636e72;
+    display: block;
+    /* margin: 10px auto; */
+    text-align: center;
+    /* padding: 5px 5px; */
+    outline: none;
+    color: #d1d8e0;
+    transition: 0.25s;
+    box-shadow: 0 2px 5px 0 #1e272e;
+}
+
+
+#popup2 input:hover{
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+/* four popup */
+.claim2{
+    border: none;
+    background-image: url(../images/H9.jpg);
+    box-shadow: 0 5px 7px 0 #191919;
+    position: relative;
+    width: 600px;
+    border-radius: 38px;
+    color:#dfe6e9 ;
+    width: 300px;
+    padding: 40px;
+    margin-top: 70px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px 0px #3d3d3d;
+    transition: 0.5s;
+}
+.claim2#claim2.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.claim2 .det2{
+    position: relative;
+    max-width: 800px;
+}
+#popup3{
+    overflow-y: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity:0;
+    transition: 0.5s;
+    color:#dfe6e9 ;
+    width: 600px;
+    height: 600px;
+    padding: 40px;
+    background-image: url(../images/H99.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px 0px #3d3d3d;
+    z-index: 3;
+}
+#popup3.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+#popup3 input{
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    border: 0;
+    border: 1px solid #485460;
+    border-radius: 24px;
+    background: none;
+    background-color: #636e72;
+    display: block;
+    /* margin: 10px auto; */
+    text-align: center;
+    /* padding: 5px 5px; */
+    outline: none;
+    color: #d1d8e0;
+    transition: 0.25s;
+    box-shadow: 0 2px 5px 0 #1e272e;
+}
+#popup3 input:hover{
+    background-color:#CAD3C8;
+    color:#3d3d3d;
+}
+
+table{
+    /* margin: 10px; */
+    width: 100%;
+    border-spacing: 2px;
+}
+table thead{
+    border-bottom: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #1e272e;
+}
+table thead td{
+    text-align: center;
+}
+span input{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* end claim */

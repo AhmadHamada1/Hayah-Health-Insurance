@@ -1,0 +1,182 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/CSS_master/admin.css">
+
+{% endblock %}
+
+<!--title-->
+{% block title %}Home{% endblock %}
+
+<!--body-->
+{% block content %}
+    <!-- hospital          -->
+    <div class="cont" id="blur">
+        <div class="det">
+            <h2> Hospital </h2>
+       <input onclick="toggle()" type="submit" value="ADD">
+        </div>
+    </div>
+    <div id="popup">
+
+        <div class="container">
+
+            <h1> Register </h1>
+        <form action="/admin" method="post">
+            <label> Name </label>
+            <input type="text" name="name" required placeholder="name">
+            <label> Phone Number </label>
+            <input type="number" required name="phonenum">
+            <label> Address </label>
+            <input type="text" required name="location" >
+
+             <label> Plan Type  </label>
+           <h3> Choose your Plan :</h3>
+
+            {% for i in plantype %}
+            <div>
+                <label for="{{i[1]}}" class="main"> {{i[1]}}
+                    <input type="checkbox" id="{{i[1]}}" value="{{i[0]}}"name="plantype">
+                    <span class="w3docs"></span>
+                </label>
+            </div>
+            {% endfor %}
+
+            <div>
+                <input type="submit" value="ADD" name="ADD">
+                <input  class="btn"  value="CLOSE" onclick="toggle()">
+            </div>
+            <!-- <input type="submit" class="btn" name="submit" value="submit" onclick="toggle()"> -->
+        </form>
+      </div>
+
+    </div>
+    <!-- end hospital          -->
+<!--  cust  -->
+
+    <div class="cust" id="CS">
+            <div class="det">
+             <h2> View Customers</h2>
+             <input onclick="pop()" type="submit" value="VIEW">
+            </div>
+        </div>
+        <div class="ping" id="ping">
+            <div class="container">
+                <form action="/admin" method="post">
+                    <div>
+                        <div class="customer-num">
+                             {% for i in customers %}
+                            <label for="custo"> {{i[1]}} {{i[2]}} </label>
+                            <input id="custo" type="text" name="claims" value="{{i[0]}}" disabled>
+                            <br>
+                            {% endfor %}
+
+                        </div>
+                        <div style="margin-right:35px;margin-top:30px;" >
+                        <input type="submit" class="btn" name="submit" value="CLOSE" onclick="pop()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Claim -->
+        <div class="claim" id="claim">
+            <div class="det">
+                <h2> All Claims </h2>
+           <input onclick="view()" type="submit" value="VIEW">
+            </div>
+        </div>
+        <div id="popup2">
+            <form action="/admin" method="post">
+            <div details>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>claim id</td>
+                            <td>name</td>
+                            <td>national id</td>
+                            <td>resolved?</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in all %}
+                        <tr>
+                            <td> {{i[0]}} </td>
+                            <td>{{i[1]}}</td>
+                            <td>{{i[2]}}</td>
+                            {% if i[3] == 0 %}
+                            <td> No </td>
+                            {% else %}
+                            <td> Yes </td>
+                            {% endif %}
+                            <td>
+                                <input type="submit" value="view {{i[0]}}" name="ViewClaim" >
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+                </form>
+
+           <span> <input onclick="view()" type="submit" value="CLOSE"></span>
+        </div>
+
+    <div class="claim2" id="claim2">
+            <div class="det2">
+                <form action="/admin" method="post">
+                <h2> Unresolved Claims</h2>
+           <input onclick="view1()" type="button" value="VIEW">
+            </div>
+        </div>
+        <div id="popup3">
+            <div details>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>claim id</td>
+                            <td>name</td>
+                            <td>national id</td>
+                            <td>resolved?</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for i in all2 %}
+                        <tr>
+                            <td> {{i[0]}} </td>
+                            <td>{{i[1]}}</td>
+                            <td>{{i[2]}}</td>
+                            {% if i[3] == 0 %}
+                            <td> No </td>
+                            {% else %}
+                            <td> Yes </td>
+                            {% endif %}
+                            <td>
+                                <input type="submit" value="view {{i[0]}}" name="ViewClaim" >
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            </form>
+           <span> <input onclick="view1()" type="submit" value="CLOSE"></span>
+        </div>
+
+    </div>
+
+
+
+<!--endcust-->
+    <script src="../static/JS_master/prog.js"></script>
+
+
+{% endblock %}
+
+
+<!--footer-->
+{% block footer %}{% endblock %}
